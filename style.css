@@ -1,0 +1,118 @@
+/* Mengatur styling dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* Mengatur tata letak utama dari chat container */
+.chat-container {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk header chat */
+.chat-header {
+    background-color: #075e54;
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-size: 18px;
+}
+
+/* Styling untuk area chat */
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-size: cover;
+    background-image: url(./source/DALL·E\ 2024-08-18\ 22.31.28\ -\ A\ unique\ and\ artistic\ background\ with\ a\ subtle\,\ semi-transparent\ watermark\ that\ reads\ \'daunproject\'\ in\ a\ stylish\ font.\ The\ watermark\ should\ be\ faint\ b.webp);
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling untuk setiap pesan */
+.message {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 8px;
+    position: relative;
+    max-width: fit-content; /* Mengatur lebar sesuai dengan panjang teks */
+    word-wrap: break-word;
+    clear: both; /* Menempatkan pesan di bawah pesan sebelumnya */
+}
+
+/* Styling pesan pengguna */
+.message.user {
+    background-color: #dcf8c6;
+    align-self: flex-end; /* Menyusun pesan pengguna di sebelah kanan */
+    border-bottom-right-radius: 0; /* Mengatur sudut bawah kanan menjadi tumpul */
+    text-align: left; /* Teks dalam pesan pengguna disejajarkan ke kiri */
+}
+
+/* Styling pesan bot */
+.message.bot {
+    background-color: #ffffff;
+    align-self: flex-start; /* Menyusun pesan bot di sebelah kiri */
+    border-bottom-left-radius: 0; /* Mengatur sudut bawah kiri menjadi tumpul */
+    text-align: left; /* Teks dalam pesan bot disejajarkan ke kiri */
+}
+
+/* Styling untuk footer chat */
+.chat-footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+    background-color: #f7f7f7;
+}
+
+#message-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+#send-btn {
+    background-color: #075e54;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#send-btn:hover {
+    background-color: #128c7e;
+}
